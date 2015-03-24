@@ -1,0 +1,42 @@
+{
+  "id": "mariadb",
+  "kind": "Pod",
+  "apiVersion": "v1beta1",
+  "desiredState": {
+    "manifest": {
+      "version": "v1beta1",
+      "id": "mariadb",
+      "containers": [{
+        "name": "mariadb",
+        "image": "centos/mariadb",
+        "env": [
+              {
+                  "name": "MYSQL_USER",
+                  "value": "mariadb"
+              },
+              {
+                  "name": "MYSQL_PASSWORD",
+                  "value": "mariadb"
+              },
+              {
+                  "name": "MYSQL_DATABASE",
+                  "value": "wordpress"
+              },
+              {
+                  "name": "MYSQL_ROOT_PASSWORD",
+                  "value": "supersecret"
+              }
+          ],
+        "ports": [{
+          "containerPort": 3306,
+          "hostPort": 3306
+        }]
+      }]
+    }
+  },
+  "labels": {
+    "name": "mariadb"
+  }
+}
+    
+
