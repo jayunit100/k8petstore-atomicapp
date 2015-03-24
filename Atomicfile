@@ -1,0 +1,9 @@
+{
+    "name": "Wordpress-App",
+    "version": "0.0.1",
+    "graph": [
+        "mariadb",
+        "wordpress"
+    ],
+    "save_answers": true
+}
