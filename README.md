@@ -1,6 +1,6 @@
 # wordpress-application
 
-This is an Application Entity of Wordpress, using MiriaDB
+This is an Application Entity of Wordpress, using MariaDB
 
 ## Installation
 
