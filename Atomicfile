@@ -5,7 +5,7 @@
     "appversion": "0.0.1",
     "description": "This is CSS on top of Wordpress",
     "graph": [
-        "mariadb-app",
+        "mariadb",
         "wordpress"
     ]
 }
