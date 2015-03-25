@@ -8,7 +8,7 @@
       "id": "mariadb",
       "containers": [{
         "name": "mariadb",
-        "image": "centos/mariadb",
+        "image": "cgoern/mysql-55-rhel7",
         "env": [
               {
                   "name": "MYSQL_USER",
