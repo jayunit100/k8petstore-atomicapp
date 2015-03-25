@@ -1,42 +1,33 @@
 {
-  "id": "mariadb",
-  "kind": "Pod",
   "apiVersion": "v1beta1",
+  "id": "mariadb",
   "desiredState": {
     "manifest": {
       "version": "v1beta1",
       "id": "mariadb",
-      "containers": [{
-        "name": "mariadb",
-        "image": "cgoern/mysql-55-rhel7",
-        "env": [
-              {
-                  "name": "MYSQL_USER",
-                  "value": "mariadb"
-              },
-              {
-                  "name": "MYSQL_PASSWORD",
-                  "value": "mariadb"
-              },
-              {
-                  "name": "MYSQL_DATABASE",
-                  "value": "wordpress"
-              },
-              {
-                  "name": "MYSQL_ROOT_PASSWORD",
-                  "value": "supersecret"
-              }
+      "containers": [
+        {
+          "name": "mysql",
+          "image": "mariadb",
+          "env": [
+            {
+              "name": "MYSQL_ROOT_PASSWORD",
+              "value": "yourpassword"
+            }
           ],
-        "ports": [{
-          "containerPort": 3306,
-          "hostPort": 3306
-        }]
-      }]
+          "cpu": 100,
+          "ports": [
+            {
+              "containerPort": 3306
+            }
+          ]
+        }
+      ]
     }
   },
   "labels": {
     "name": "mariadb"
-  }
+  },
+  "kind": "Pod"
 }
-    
 

@@ -1,38 +1,32 @@
 {
-  "id": "wordpress",
-  "kind": "Pod",
   "apiVersion": "v1beta1",
+  "id": "wordpress",
   "desiredState": {
     "manifest": {
       "version": "v1beta1",
       "id": "wordpress",
-      "containers": [{
-        "name": "wordpress",
-        "image": "wordpress",
-        "env": [
-              {
-                  "name": "WORDPRESS_DB_HOST",
-                  "value": ""
-              },
-              {
-                  "name": "WORDPRESS_DB_USER",
-                  "value": ""
-              },
-              {
-                  "name": "WORDPRESS_DB_PASSWORD",
-                  "value": ""
-              }
+      "containers": [
+        {
+          "name": "wordpress",
+          "image": "wordpress",
+          "ports": [
+            {
+              "containerPort": 80
+            }
           ],
-        "ports": [{
-          "containerPort": 80,
-          "hostPort": 80 
-        }]
-      }]
+          "env": [
+            {
+              "name": "WORDPRESS_DB_PASSWORD",
+              "value": "yourpassword"
+            }
+          ]
+        }
+      ]
     }
   },
   "labels": {
-    "name": "wordpress"
-  }
+    "name": "wpfrontend"
+  },
+  "kind": "Pod"
 }
-    
 

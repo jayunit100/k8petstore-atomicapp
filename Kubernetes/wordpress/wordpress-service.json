@@ -1,13 +1,15 @@
 {
-  "id": "wordpress",
   "kind": "Service",
   "apiVersion": "v1beta1",
+  "id": "wpfrontend",
   "port": 80,
-  "containerPort": 80,
   "selector": {
-    "name": "wordpress"
+    "name": "wpfrontend"
   },
+  "containerPort": 80,
   "labels": {
-    "name": "wordpress"
-  }
+    "name": "wpfrontend"
+  },
+  "createExternalLoadBalancer": true
 }
+
