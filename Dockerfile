@@ -1,13 +1,10 @@
-FROM rhel7 
+FROM scratch 
 
 MAINTAINER Christoph Görn <goern@redhat.com>
 
-RUN mkdir /application-entity
-
-WORKDIR /application-entity
-
-ADD Atomicfile /application-entity/Atomicfile
-ADD Dockerfile /application-entity/Dockerfile
-ADD params.conf /application-entity/params.conf
-ADD graph/ /application-entity/graph/
+ADD src/cat /cat
+ADD Atomicfile /Atomicfile
+ADD Dockerfile /Dockerfile
+ADD params.conf /params.conf
+ADD graph/ /graph/
 
