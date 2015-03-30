@@ -2,9 +2,9 @@ FROM scratch
 
 MAINTAINER Christoph Görn <goern@redhat.com>
 
-ADD src/cat /cat
-ADD Atomicfile /Atomicfile
-ADD Dockerfile /Dockerfile
-ADD params.conf /params.conf
-ADD graph/ /graph/
+ENV container docker
+LABEL INSTALL /bin/cat /application-entity/README.md
 
+ADD / /application-entity
+
+ENTRYPOINT [ "/application-entity/bin/cat", "/application-entity/README.md" ]
