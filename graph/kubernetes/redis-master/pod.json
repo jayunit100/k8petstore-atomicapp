@@ -1,0 +1,22 @@
+{
+      "id": "redismaster",
+      "kind": "Pod",
+        "apiVersion": "v1beta1",
+            "desiredState": {
+                    "manifest": {
+                              "version": "v1beta1",
+                              "id": "redismaster",
+                                    "containers": [{
+                                                "name": "master",
+                                                        "image": "jayunit100/k8-petstore-redis-master:VERSION",
+                                                        "ports": [{
+                                                                      "containerPort": 6379,
+                                                                                "hostPort": 6379
+                                                                                            }]
+                                                      }]
+                                  }
+                      },
+              "labels": {
+                      "name": "redis-master"
+                            }
+}

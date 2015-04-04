@@ -1,7 +1,7 @@
-# wordpress-application
-
-This is an Application Entity of Wordpress, using MariaDB
+# k8petstore Atomic application
 
 ## Installation
 
-atomic install wordpress-app
+Not sure how this works.. yet..
+
+atomic install k8petstore-app 
