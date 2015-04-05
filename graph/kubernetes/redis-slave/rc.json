@@ -1,27 +1,38 @@
 {
-      "id": "redissc",
-      "kind": "ReplicationController",
-        "apiVersion": "v1beta1",
+    "apiVersion": "v1beta1",
+    "desiredState": {
+        "podTemplate": {
             "desiredState": {
-                    "replicas": SLAVE,
-                    "replicaSelector": {"name": "redisslave"},
-                        "podTemplate": {
-                                  "desiredState": {
-                                               "manifest": {
-                                                              "version": "v1beta1",
-                                                              "id": "redissc",
-                                                            "containers": [{
-                                                              "name": "slave",
-                                                             "image": "jayunit100/k8-petstore-redis-slave:VERSION",
-                                                                                                     "ports": [{"containerPort": 6379, "hostPort": 6380}]
-                                                                                                                      }]
-                                                                       }
-                                                     },
-                                  "labels": {
-                                              "name": "redisslave",
-                                              "uses": "redis-master"
-                                                        }
-                                      }
-                      },
-              "labels": {"name": "redisslave"}
+                "manifest": {
+                    "containers": [
+                        {
+                            "image": "jayunit100/k8-petstore-redis-slave:VERSION",
+                            "name": "slave",
+                            "ports": [
+                                {
+                                    "containerPort": 6379,
+                                    "hostPort": 6380
+                                }
+                            ]
+                        }
+                    ],
+                    "id": "redissc",
+                    "version": "v1beta1"
+                }
+            },
+            "labels": {
+                "name": "redisslave",
+                "uses": "redis-master"
+            }
+        },
+        "replicaSelector": {
+            "name": "redisslave"
+        },
+        "replicas": "SLAVE"
+    },
+    "id": "redissc",
+    "kind": "ReplicationController",
+    "labels": {
+        "name": "redisslave"
+    }
 }

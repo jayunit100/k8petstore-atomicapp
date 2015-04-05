@@ -1,13 +1,13 @@
 {
-      "id": "redismaster",
-      "kind": "Service",
-        "apiVersion": "v1beta1",
-            "port": 6379,
-              "containerPort": 6379,
-                  "selector": {
-                          "name": "redis-master"
-                                },
-                    "labels": {
-                            "name": "redis-master"
-                                  }
+    "apiVersion": "v1beta1",
+    "containerPort": 6379,
+    "id": "redismaster",
+    "kind": "Service",
+    "labels": {
+        "name": "redis-master"
+    },
+    "port": 6379,
+    "selector": {
+        "name": "redis-master"
+    }
 }

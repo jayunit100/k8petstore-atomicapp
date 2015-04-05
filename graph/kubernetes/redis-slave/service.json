@@ -1,13 +1,13 @@
 {
-      "id": "redisslave",
-      "kind": "Service",
-        "apiVersion": "v1beta1",
-            "port": 6379,
-              "containerPort": 6379,
-                  "labels": {
-                          "name": "redisslave"
-                                },
-                    "selector": {
-                            "name": "redisslave"
-                                  }
+    "apiVersion": "v1beta1",
+    "containerPort": 6379,
+    "id": "redisslave",
+    "kind": "Service",
+    "labels": {
+        "name": "redisslave"
+    },
+    "port": 6379,
+    "selector": {
+        "name": "redisslave"
+    }
 }
