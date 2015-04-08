@@ -1,4 +1,4 @@
-
+{
     "specversion": "v1-alpha", 
     "name": "k8petstore",
     "id": "k8petstore-atomic",

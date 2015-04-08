@@ -6,7 +6,7 @@
                 "manifest": {
                     "containers": [
                         {
-                            "image": "jayunit100/k8-petstore-redis-slave:VERSION",
+                            "image": "jayunit100/k8-petstore-redis-slave:$VERSION",
                             "name": "slave",
                             "ports": [
                                 {
@@ -28,7 +28,7 @@
         "replicaSelector": {
             "name": "redisslave"
         },
-        "replicas": "SLAVE"
+        "replicas": "$SLAVE"
     },
     "id": "redissc",
     "kind": "ReplicationController",
