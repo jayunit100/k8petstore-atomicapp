@@ -27,7 +27,7 @@
         "replicaSelector": {
             "name": "bps"
         },
-        "replicas": "LG"
+        "replicas": "$LG"
     },
     "id": "bpsloadgenrc",
     "kind": "ReplicationController",

@@ -6,7 +6,7 @@
                 "manifest": {
                     "containers": [
                         {
-                            "image": "jayunit100/k8-petstore-web-server:VERSION",
+                            "image": "jayunit100/k8-petstore-web-server:$VERSION",
                             "name": "frontend-go-restapi"
                         }
                     ],
@@ -22,7 +22,7 @@
         "replicaSelector": {
             "name": "frontend"
         },
-        "replicas": "FE"
+        "replicas": "$FE"
     },
     "id": "fectrl",
     "kind": "ReplicationController",
